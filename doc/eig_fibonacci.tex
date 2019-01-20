@@ -90,138 +90,67 @@
 Fibonacci numbers are defined recursively by
 $$F_{0} = 0, F_{1} = 1, F_{n+1} = F_{n} + F_{n-1}, \forall n\ge 2.$$
 What is $F_{100}$?
-Our answer to this problem is surprisingly simple:
-$$F_{100} = [\lambda_{1}^{100}/\sqrt 5]$$
-where $[a]$ means integer part of $a$ and 
+Our answer to this problem is surprisingly simple but a big number:
+$$F_{100} = [\lambda_{1}^{100}/\sqrt 5] \approx 3.54\cdot 10^{20}$$
+where $[a]$ means integer part of $a$ and $\lambda_{1}$ is the golden mean:
 $$\lambda_{1} = \frac{1+ \sqrt 5}{2}.$$
 
 \section{Analysis}
-Consider the following question:
-
-\begin{itemize}
- \item You shoot a square $(-1, 1)^{2}$. Suppose your shot is uniform in this square, then what is the probability you have a successful shot? We say
- ``your shot is successful'', if your shot belongs to the unit ball $B_{1}$.
-\end{itemize}
-
-The answer is 
-$$\hbox{ Prob of succesful shot } = \frac{\hbox{Area of  }B_{1}} { \hbox{ Area of }(-1, 1)^{2}} = \frac{\pi}{4} .$$
-
-
-This means that, as long as one can approximate probability of successful shot, one can approximate $\pi$ by multiplying $4$. This can be done by computer: 
-\begin{itemize}
-\item Simulate many uniform shots, and compute the ratio of successful shots.
-\end{itemize}
-
-
-%\section{Implementation}
-Pseudocode for pi\_mc(N):
-\begin{itemize}
-\item Generate $N$ iid points $$\{(X_i, Y_i): i = 1, 2, \ldots, N, \ X_i, Y_i \sim U(-1,1)\};$$
-\item Count $n$, the number of points satisfying
-$$X_i^2 + Y_i^2 <1.$$
-\item Compute 
-$$\hat \pi = 4 \cdot \frac{n}{N}.$$
-\end{itemize}
-
-
-
-
-\section{Monte Carlo basics}
-
-\subsection{Bias and MSE}
-One can implement above approximation multiple times and observe that
-\begin{itemize}
-\item (random estimator) Target value $\pi$ is deterministic, but each implementation gives different outcome $\hat \pi$;
-\item (Convergence) Each obtained outcome, as long as $N$ is large enough, gives some close approximation.
-\end{itemize}
-
-We are going to generalize our observations in this below. 
-\begin{itemize}
-\item
-A random estimator $\hat \alpha$ to a deterministic value $\alpha$ is called as Monte Carlo (MC) approximation. 
-\item Moreover, we define
-$$Bias = \mathbb E [\hat \alpha] - \alpha$$
+We write 
+$$\left[ 
+\begin{array}
+ {ll}
+ F_{n} \\
+ F_{n+1}
+\end{array}
+\right]
+= 
+\left[ 
+\begin{array}
+ {ll}
+ 0 & 1 \\
+1 & 1
+\end{array}
+\right]
+\left[ 
+\begin{array}
+ {ll}
+ F_{n-1} \\
+ F_{n}
+\end{array}
+\right]
+$$
+Then, eigenvectors of $A$ are given by
+$$\lambda_{1} = \frac{1+\sqrt 5}{2}, \ v_{1} = [1, \lambda_{1}]'$$
 and 
-$$MSE = \mathbb E [(\hat \alpha - \alpha)^2].$$
-\item If Bias is zero, then we call this as unbiased MC.
-\end{itemize}
+$$\lambda_{2} = \frac{1 - \sqrt 5}{2}, \ v_{2} = [1, \lambda_{2}]'.$$
+If we denote
+$$V = [v_{1}, v_{2}], \ \Lambda = diag(\lambda_{1}, \lambda_{2}),$$
+then we have diagonalization of $A$ as
+$$AV = V\Lambda, \hbox{ or } A = V \Lambda V^{-1}.$$
 
-\begin{proposition}
- $MSE (\hat \alpha) = |Bias(\hat \alpha)|^2 + Var(\hat \alpha)$.
- In particular, if $\hat \alpha$ is unbiased, then MSE is Variance.
-\end{proposition}
-\begin{proof}
-  ...
-\end{proof}
-
-
-Although seemingly absurd, we consider the above estimator with $N = 1$, which is equivalent to 
-\begin{itemize}
- \item Consider 
- $$\hat \alpha = 4 I(X_1^2 + Y_1^2 <1), \ X_1, Y_1 \sim U(-1, 1)$$ 
- as MC for $\pi$. Then the outcome is either $0$ or $4$. In any case, it is a bad approximation. 
- \item However, we can show that it's an unbiased MC. (why?)
- \item Find MSE?
-\end{itemize}
-
-\subsection{Ordinary Monte Carlo}
-Unbiased MC is very desirable, because one can employ crude (ordinary) MC
-to make it more accurate:
-\footnote{We say a random variable $X$ is in $L^p$, if its $p$th moment exists, 
-i.e. $$\mathbb E X^p <\infty .$$
-If $X\in L^2$, then we say it's square integrable.}
-\begin{itemize}
- \item Suppose $\hat \alpha$ is a square integrable unbiased MC;
- \item Obtain $N$ independent replicates
- $$\{\hat \alpha_i: i = 1,\ldots, N\}.$$
- \item Taking their average, it gives a new MC:
- $$\beta_N = \frac 1 N \sum_{i=1}^N \hat \alpha_i.$$
- \item $\beta_N$ is unbiased again. (why?)
- \item $MSE(\beta_N) = \frac 1 N MSE(\hat \alpha) \to 0$. (why?)
- \item $\beta_N$ is almost surely consistent,
-  (why?)  i.e. 
-  $$\mathbb P(\lim_N \beta_N = \alpha) = 1.$$
-  \item $\beta_N$ is $L^2$-consistent,  (why?) i.e.
-  $$\mathbb E (\beta_N - \alpha)^2 \to 0.$$
-\end{itemize}
-
-
-
-As a conclusion, one can always use crude MC to make better approximation provided there exists an unbiased MC $\hat \alpha$, which is obtainable in sacrifice of  higher computational cost.
-Given a fixed amount of computational cost, to improve the efficiency, it is essential to reduce $Var(\hat \alpha)$ as much as possible.
-
-
-{\bf Ex.}
-Given i.i.d $\{\alpha_i: i\in 1, 2, \ldots, N\}$, we use 
-$$\beta_N = \frac 1 N \sum_{i=1}^N (\alpha_i -\bar \alpha)^2$$
-as the estimator of $Var(\alpha_1)$, where $\bar \alpha = \frac 1 N \sum_{i=1}^N \alpha_i$. Suppose $\alpha_1\in L^2$, then 
-\begin{itemize}
- \item Prove it is biased.
- \item Prove that it is consistent in $L^2$.
- \item Can you propose an unbiased estimator?
-\end{itemize}
-
-{\bf Ex.}
-Prove that $L^2$ consistency implies consistency in probability.
-
-{\bf Prj.} Investigate the convergence rate of pi\_mc(N).
-\begin{itemize}
-\item Repeat $m = 100$ times:
-	
-	\quad For $N \in \{2^n: n = 5, \ldots, 10\}$: Run PiMc(N)
-\item approximate their MSE for each $N$ with $m$ computations;
-\item plot log-log chart and approximate its convergence order.
-\end{itemize}
-
-{\bf Ex.} Can you improve the MC for $\pi$? Hint: antithetic variate method
-
-{\bf Ex.} Can you propose a deterministic approximation to $\pi$?
-
-
-
-
-
-
+Therefore, 
+$$
+\left[
+\begin{array}
+ {ll}
+ F_{n} \\
+ F_{n+1}
+\end{array}
+\right]
+= 
+V \Lambda^{n} V^{-1} 
+\left[
+\begin{array}
+ {ll}
+ F_{0} \\
+ F_{1}
+\end{array}
+\right].
+$$
+So we can compute 
+$$F_{100} = (\lambda_{1}^{100} - \lambda_{2}^{100})/(\lambda_{1} - 
+\lambda_{2}).$$
 
 
 \end{document}
