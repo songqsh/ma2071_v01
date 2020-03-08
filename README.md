@@ -1,6 +1,7 @@
 # ma2071_v01
 linear algebra
 
+- LA is useful - [youtube](https://youtu.be/X0HXnHKPXSo)
 - Linear transformation on 2-d image - [ipynb](src/linear_transform_image.ipynb)
 - Linear algebra basics with tensor flow - [ipynb](src/linalg_tf.ipynb)
 - LU factorization - [ipynb](src/lu.ipynb)
