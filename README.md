@@ -2,6 +2,7 @@
 linear algebra
 
 - LA is useful - [youtube](https://youtu.be/X0HXnHKPXSo)
+- 19 Final - [ipynb](src/20problem19finalv01.ipynb)
 - Linear transformation on 2-d image - [ipynb](src/linear_transform_image.ipynb)
 - Linear algebra basics with tensor flow - [ipynb](src/linalg_tf.ipynb)
 - LU factorization - [ipynb](src/lu.ipynb)
