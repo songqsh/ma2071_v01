@@ -1,6 +1,6 @@
 # ma2071_v01
 linear algebra
-
+- 19E-website by Fehribach - [home](http://www.math.wpi.edu/Course_Materials/MA2071E19/)
 - LA is useful - [youtube](https://youtu.be/X0HXnHKPXSo)
 - 19 Final - [ipynb](src/20problem19finalv01.ipynb)
 - Linear transformation on 2-d image - [ipynb](src/linear_transform_image.ipynb)
