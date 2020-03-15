@@ -1,0 +1,89 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Notations on Linear System}
+%\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\section{Goal}
+Our goal is to
+\begin{itemize}
+ \item Understand the definitions:  Linear system, Coefficient matrix, Augmented matrix
+ \item Solve a linear system by Equivalent Row Operations (EROs)
+\end{itemize}
+\section{Analysis}
+\subsection{Notations}
+\begin{itemize}
+ \item General form of $m\times n$ linear system (system of linear equation) is
+given by
+$$
+\left\{
+\begin{array}
+ {ll}
+ a_{11} x_{1} + \cdots + a_{1n} x_{n} &= b_{1} \\
+ a_{21} x_{1} + \cdots + a_{2n} x_{n} &= b_{2} \\
+ \vdots \\
+ a_{m1} x_{1} + \cdots + a_{mn} x_{n} &= b_{m}.
+\end{array}
+\right.
+$$
+\item 
+Here, $a_{ij}$ and $b_{i}$ are given numbers(coefficients). 
+\item A concise way to write the linear system is $A x = b$, where
+\begin{itemize}
+ \item coefficient matrix
+$$ A = 
+\begin{bmatrix}
+ a_{11} & \cdots & a_{1n} \\
+ a_{21} & \cdots & a_{2n} \\
+ \vdots\\
+ a_{m1} & \cdots & a_{mn} \\
+\end{bmatrix}
+$$
+\item b-vector
+$$ b = 
+\begin{bmatrix}
+ b_{1}\\b_{2}\\ \vdots\\b_{m}
+\end{bmatrix}
+$$
+\end{itemize}
+\item 
+and we want to solve for the solution vector
+$$x = 
+\begin{bmatrix}
+ x_{1}\\ x_{2}\\ \vdots\\ x_{m}
+\end{bmatrix}
+$$
+
+\item A more concise way to write linear system is by augmented matrix 
+$[A\  |\  b ]$, i.e. 
+$$\begin{bmatrix}
+ a_{11} & \cdots & a_{1n} & | & b_{1} \\
+ a_{21} & \cdots & a_{2n} & | & b_{2} \\
+ \vdots\\
+ a_{m1} & \cdots & a_{mn} & | & b_{m} \\
+\end{bmatrix}
+$$
+
+
+
+\end{itemize}
+\subsection{Example}
+
+
+
+
+
+
+\end{document}  
