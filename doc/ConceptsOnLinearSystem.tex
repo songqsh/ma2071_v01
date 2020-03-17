@@ -1,0 +1,186 @@
+\documentclass{beamer}
+\usepackage{soul}
+\graphicspath{{/}}
+
+%song added
+\usepackage{graphicx}
+
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Perm}{Perm}
+\DeclareMathOperator{\Mon}{Mon}
+\DeclareMathOperator{\PermAut}{PermAut}
+\DeclareMathOperator{\AntiAut}{AntiAut}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\PG}{PG}
+
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\A}{\mathcal{A}_{H}}
+\newcommand{\Sy}{\mathcal{S}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\ww}{\omega}
+\newcommand{\wo}{\overline{\omega}}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+
+\theoremstyle{theorem}
+\newtheorem{cor}{Corollary}
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}
+  \usecolortheme{default}
+  % or ...
+
+  \setbeamercovered{invisible}
+  % or whatever (possibly just delete it)
+}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%gets rid of navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\title % (optional, use only with long paper titles)
+{What are Systems of Linear Equations?}
+\author{}
+
+\institute{WPI} % (optional, but mostly needed)
+
+\iffalse
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline for section \thesection}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\fi
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\section{Applications of Linear Algebra}
+
+\begin{frame}
+
+\begin{itemize}
+ \item Linear algebra is to study system of linear equations via matrix and vector
+ \item They have many applications
+
+\begin{itemize}
+ \item  Machine learning
+ \item Economics and finance 
+ \item Statistics
+ \item Image processing
+ \item and more ...
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+
+
+\section{What is Matrix and Vector?}
+
+\begin{frame}
+ {If you google ``Matrix'', you probably get ...}
+ \pause
+ \begin{figure}
+  \includegraphics[width= 0.5\textwidth]{matrix.jpg}
+  \caption{From movie ``The Matrix''}
+  \label{fig:matrix}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+{Definitions}
+\begin{itemize}
+ \item A matrix is a two-dimensional array of numbers, 
+\begin{itemize}
+ \item A 2 by 3 matrix 
+ $$ A = 
+\begin{bmatrix}
+ 2 & 1 & 15\\
+ 1 & 1 & 5\\
+ \end{bmatrix}
+$$
+\end{itemize}
+\item If a matrix has only one row or only one column it is called a vector, 
+\begin{itemize}
+ \item A 2 dimensional column vector 
+ $$ b_{1} = 
+\begin{bmatrix}
+ 15 \\
+ 5  \\
+ \end{bmatrix}, 
+ $$
+\item A 2 dimensional  row vector
+ $$  b_{2} = 
+ \begin{bmatrix}
+ 15 &
+ 5  \\
+ \end{bmatrix}, 
+ $$
+\end{itemize} 
+\end{itemize}
+\end{frame}
+
+\section{Linear system}
+
+
+
+ \begin{frame}{An example}
+\begin{columns}
+    \begin{column}{0.47\textwidth}
+        \begin{figure}
+  \includegraphics[width= 1.\textwidth]{img1.png}
+  \caption{Before Linear Transormation}
+  \label{fig:goat1}
+\end{figure}    \end{column}
+    \begin{column}{0.5\textwidth}
+        \begin{figure}
+  \includegraphics[width= 0.9\textwidth]{img2.png}
+  \caption{After Linear Transormation}
+  \label{fig:goat2}
+\end{figure}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
+
