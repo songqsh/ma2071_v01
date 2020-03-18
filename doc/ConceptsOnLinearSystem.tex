@@ -194,7 +194,7 @@ $$
  %{Transformation as a mapping}
  
 \begin{itemize}
- \item Transformation takes each coordinate vector to another coordinate vector by mapping
+ \item Transformation maps each coordinate vector to another coordinate vector by 
  $$ T:
 \begin{bmatrix}
  x_{1}\\x_{2}
@@ -206,12 +206,25 @@ $$
 \end{bmatrix}
 $$
 
+\item (ex.) A coordinate after transformation,
+ $$ T:
+\begin{bmatrix}
+ 100\\100
+\end{bmatrix}
+\mapsto 
+\begin{bmatrix}
+ 150\\100
+\end{bmatrix}
+$$
 \item (Q.) 
-A corner of the new picture is
-$\begin{bmatrix}
- 350\\ 300
-\end{bmatrix}$.
-What is its original coordinate?
+Find a corner before the transformation,
+ $$ T:
+\ ?
+\mapsto 
+\begin{bmatrix}
+ 350\\300
+\end{bmatrix}
+$$
 \end{itemize}
 \end{frame}
 
@@ -250,6 +263,40 @@ What is its original coordinate?
  %{General form }
 \begin{columns}
 \begin{column}
+ {.6\textwidth}
+ \begin{itemize}
+ \item A linear equation is
+\begin{equation*}
+ \label{eq:02}
+\begin{array}
+ {ll}
+ a_{1} x_{1} + \cdots + a_{n} x_{n} &= b
+\end{array}
+\end{equation*}
+\item Coefficients $a_{j}$ and $b$ are given.
+\item $x = (x_{1}, \cdots x_{n})$ is solution if \\LHS = RHS.
+\end{itemize}
+\hrule
+\vspace{.2in}
+{\tiny
+{\bf ex.} Identify the followings are linear equations:
+$$2x - y = 1-3z.$$
+$$ 2 x_{1} + \cos x_{2} = 5.$$
+}
+\end{column}
+\begin{column}
+ {.3\textwidth}
+% What is the solution of \eqref{eq:01}?
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+ %{General form }
+\begin{columns}
+\begin{column}
  {.7\textwidth}
  \begin{itemize}
  \item $m\times n$ linear system is 
@@ -266,12 +313,8 @@ What is its original coordinate?
 \right.
 \end{equation*}
 \item Coefficients $a_{ij}$ and $b_{i}$ are given numbers
-\item The goal is to find the solution
-$$x = 
-\begin{bmatrix}
- x_{1}\\ x_{2}\\ \vdots\\ x_{m}
-\end{bmatrix}
-$$
+\item $x = (x_{1}, \cdots x_{n})$ is solution if \\
+LHS = RHS for each equation.
 \end{itemize}
 
 \end{column}
@@ -283,7 +326,6 @@ $$
 
  
 \end{frame}
-
 
 
 \begin{frame}
@@ -343,16 +385,61 @@ $$
  \begin{itemize}
  \item  write coefficient matrix
  \item write augmented matrix
- \item find its solution (next )
+ \item check the candidate solution $x = (3, 2, 3)$.
 \end{itemize}
 
 \end{column}
 \begin{column}
  {.3\textwidth}
-% What is the solution of \eqref{eq:01}?
+% 
 \end{column}
 \end{columns}
 \end{frame}
+
+
+
+
+
+\begin{frame}
+ {}
+\begin{columns}
+\begin{column}
+ {.6\textwidth}
+Consider linear system
+$$
+\left\{
+\begin{array}
+ {llllll}
+%  & &+  x_{2} &- x_{3} & &+x_{5} &= 4 \\
+   - x_{1} - x_{2} +2 x_{3} &= 1 \\
+  x_{1} \quad\quad\quad +  x_{3} &= 6 .
+\end{array}
+\right.
+$$
+
+ \begin{itemize}
+ \item  write coefficient matrix
+ \item write augmented matrix
+ \item check the candidate solution $x = (3, 2, 3)$.
+ \item Can you say more?
+\end{itemize}
+
+\end{column}
+\begin{column}
+ {.3\textwidth}
+% 
+\end{column}
+\end{columns}
+\vspace{.2in}
+\hrule
+\vspace{.2in}
+Next, 
+\begin{itemize}
+  \item How many solutions for a given equation?
+ \item How to solve a linear system systematically?
+\end{itemize}
+\end{frame}
+
 
 \end{document}
 
