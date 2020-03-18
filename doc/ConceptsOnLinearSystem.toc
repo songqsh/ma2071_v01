@@ -4,6 +4,6 @@
 \beamer@sectionintoc {2}{What and Why do we study Linear Algebra? }{3}{0}{2}
 \beamer@sectionintoc {3}{What is Matrix and Vector?}{4}{0}{3}
 \beamer@sectionintoc {4}{Linear system (system of linear equation)}{6}{0}{4}
-\beamer@sectionintoc {5}{An example in image processing}{6}{0}{5}
+\beamer@sectionintoc {5}{An application in image processing}{6}{0}{5}
 \beamer@sectionintoc {6}{General form of Linear System (System of Linear Equations)}{9}{0}{6}
 \beamer@sectionintoc {7}{Example}{12}{0}{7}
