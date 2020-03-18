@@ -160,26 +160,159 @@ $$
 \end{itemize}
 \end{frame}
 
-\section{Linear system}
+\section{Linear system (system of linear equation)}
 
+\section{An  example in image processing}
 
-
- \begin{frame}{An example}
+ \begin{frame}{Before and after a transformation}
 \begin{columns}
-    \begin{column}{0.47\textwidth}
+    \begin{column}{0.5\textwidth}
         \begin{figure}
-  \includegraphics[width= 1.\textwidth]{img1.png}
-  \caption{Before Linear Transormation}
+  \includegraphics[width= 1\textwidth]{img1.png}
+  \caption{Before  Transormation}
   \label{fig:goat1}
 \end{figure}    \end{column}
     \begin{column}{0.5\textwidth}
         \begin{figure}
-  \includegraphics[width= 0.9\textwidth]{img2.png}
-  \caption{After Linear Transormation}
+  \includegraphics[width= 1\textwidth]{img2.png}
+  \caption{After Transormation}
   \label{fig:goat2}
 \end{figure}
     \end{column}
 \end{columns}
+\end{frame}
+
+\begin{frame}
+ {Transformation as a mapping}
+ 
+\begin{itemize}
+ \item Transformation takes each coordinate vector to another coordinate vector by mapping
+ $$ T:
+\begin{bmatrix}
+ x_{1}\\x_{2}
+\end{bmatrix}
+\mapsto 
+\begin{bmatrix}
+ \frac 1 2 x_{1} + x_{2}
+ \\x_{2}
+\end{bmatrix}
+$$
+
+\item (Q.) 
+A corner of the new picture is
+$\begin{bmatrix}
+ 350\\ 300
+\end{bmatrix}$.
+What is its original coordinate?
+\end{itemize}
+\end{frame}
+
+
+
+ \begin{frame}{As a linear system}
+\begin{columns}
+    \begin{column}{0.5\textwidth}
+        
+\begin{itemize}
+ \item Set the original corner as 
+ $\begin{bmatrix}
+ x_{1}\\x_{2}
+\end{bmatrix}$
+\item Solve
+\begin{equation*}
+ \label{eq:01}
+\left\{
+\begin{array}
+ {ll}
+\frac 1 2 x_{1}  \ + & x_{2} = 350 \\
+& x_{2} = 300
+\end{array}
+\right.
+\end{equation*}
+ \item The solution is ...
+\end{itemize}   
+\end{column}
+    \begin{column}{0.5\textwidth}
+   %text
+    \end{column}
+\end{columns}
+\end{frame}
+\section{Linear System (System of Linear Equations)}
+\begin{frame}
+ {General form - 1}
+\begin{columns}
+\begin{column}
+ {.7\textwidth}
+ \begin{itemize}
+ \item $m\times n$ linear system is 
+\begin{equation*}
+ \label{eq:02}
+\left\{
+\begin{array}
+ {ll}
+ a_{11} x_{1} + \cdots + a_{1n} x_{n} &= b_{1} \\
+ a_{21} x_{1} + \cdots + a_{2n} x_{n} &= b_{2} \\
+ \vdots \\
+ a_{m1} x_{1} + \cdots + a_{mn} x_{n} &= b_{m}.
+\end{array}
+\right.
+\end{equation*}
+\item Coefficients $a_{ij}$ and $b_{i}$ are given numbers
+\item The goal is to find the solution
+$$x = 
+\begin{bmatrix}
+ x_{1}\\ x_{2}\\ \vdots\\ x_{m}
+\end{bmatrix}
+$$
+\end{itemize}
+
+\end{column}
+\begin{column}
+ {.3\textwidth}
+% What is the solution of \eqref{eq:01}?
+\end{column}
+\end{columns}
+
+ 
+\end{frame}
+
+
+
+\begin{frame}
+ {General form - 2}
+\begin{columns}
+\begin{column}
+ {.7\textwidth}
+ For $m\times n$ linear system,
+ \begin{itemize}
+ \item   coefficient matrix
+$$ A = 
+\begin{bmatrix}
+ a_{11} & \cdots & a_{1n} \\
+ a_{21} & \cdots & a_{2n} \\
+ \vdots\\
+ a_{m1} & \cdots & a_{mn} \\
+\end{bmatrix}
+$$
+\item augmented matrix 
+$[A\  |\  b ]$, i.e. 
+$$\begin{bmatrix}
+ a_{11} & \cdots & a_{1n} & | & b_{1} \\
+ a_{21} & \cdots & a_{2n} & | & b_{2} \\
+ \vdots\\
+ a_{m1} & \cdots & a_{mn} & | & b_{m} \\
+\end{bmatrix}
+$$
+\end{itemize}
+
+\end{column}
+\begin{column}
+ {.3\textwidth}
+% What is the solution of \eqref{eq:01}?
+\end{column}
+\end{columns}
+
+ 
 \end{frame}
 
 \end{document}

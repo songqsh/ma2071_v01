@@ -2,4 +2,6 @@
 \select@language {english}
 \beamer@sectionintoc {1}{Applications of Linear Algebra}{2}{0}{1}
 \beamer@sectionintoc {2}{What is Matrix and Vector?}{3}{0}{2}
-\beamer@sectionintoc {3}{Linear system}{6}{0}{3}
+\beamer@sectionintoc {3}{Linear system (system of linear equation)}{6}{0}{3}
+\beamer@sectionintoc {4}{An example in image processing}{6}{0}{4}
+\beamer@sectionintoc {5}{Linear System (System of Linear Equations)}{9}{0}{5}
