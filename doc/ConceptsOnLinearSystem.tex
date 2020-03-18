@@ -92,6 +92,15 @@
   \titlepage
 \end{frame}
 
+\section{Objective}
+\begin{frame}
+ Given a linear system, 
+\begin{itemize}
+ \item write its coefficient matrix, 
+ \item write its augmented matrix,
+ \item check a candidate solution.
+\end{itemize}
+\end{frame}
 
 \section{Applications of Linear Algebra}
 
@@ -119,7 +128,6 @@
 
 \begin{frame}
  {If you google ``Matrix'', you probably get ...}
- \pause
  \begin{figure}
   \includegraphics[width= 0.5\textwidth]{matrix.jpg}
   \caption{From movie ``The Matrix''}
@@ -164,7 +172,7 @@ $$
 
 \section{An  example in image processing}
 
- \begin{frame}{Before and after a transformation}
+ \begin{frame}%{Before and after a transformation}
 \begin{columns}
     \begin{column}{0.5\textwidth}
         \begin{figure}
@@ -183,7 +191,7 @@ $$
 \end{frame}
 
 \begin{frame}
- {Transformation as a mapping}
+ %{Transformation as a mapping}
  
 \begin{itemize}
  \item Transformation takes each coordinate vector to another coordinate vector by mapping
@@ -209,7 +217,7 @@ What is its original coordinate?
 
 
 
- \begin{frame}{As a linear system}
+ \begin{frame}%{As a linear system}
 \begin{columns}
     \begin{column}{0.5\textwidth}
         
@@ -237,9 +245,9 @@ What is its original coordinate?
     \end{column}
 \end{columns}
 \end{frame}
-\section{Linear System (System of Linear Equations)}
+\section{General form of Linear System (System of Linear Equations)}
 \begin{frame}
- {General form - 1}
+ %{General form }
 \begin{columns}
 \begin{column}
  {.7\textwidth}
@@ -279,7 +287,7 @@ $$
 
 
 \begin{frame}
- {General form - 2}
+ %{Coefficient matrix and Augmented matrix}
 \begin{columns}
 \begin{column}
  {.7\textwidth}
@@ -311,8 +319,39 @@ $$
 % What is the solution of \eqref{eq:01}?
 \end{column}
 \end{columns}
+\end{frame}
 
- 
+\section{Example}
+
+\begin{frame}
+ {}
+\begin{columns}
+\begin{column}
+ {.4\textwidth}
+Consider linear system
+$$
+\left\{
+\begin{array}
+ {ll}
+  x_{1} \ + 2 x_{2} - x_{3} &= 4 \\
+   - x_{1} - x_{2} +2 x_{3} &= 1 \\
+  x_{1} \quad\quad\quad +  x_{3} &= 6 .
+\end{array}
+\right.
+$$
+
+ \begin{itemize}
+ \item  write coefficient matrix
+ \item write augmented matrix
+ \item find its solution (next )
+\end{itemize}
+
+\end{column}
+\begin{column}
+ {.3\textwidth}
+% What is the solution of \eqref{eq:01}?
+\end{column}
+\end{columns}
 \end{frame}
 
 \end{document}

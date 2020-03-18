@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  17 MAR 2020 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  17 MAR 2020 22:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -951,57 +951,52 @@ LaTeX Info: Redefining \includegraphics on input line 89.
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
-] <matrix.jpg, id=60, 175.857pt x 138.7584pt>
+] [3
+
+] <matrix.jpg, id=75, 175.857pt x 138.7584pt>
 File: matrix.jpg Graphic file (type jpg)
 
 <use matrix.jpg>
-Package pdftex.def Info: matrix.jpg used on input line 128.
-(pdftex.def)             Requested size: 171.14764pt x 135.05069pt.
- [3
-
- <./matrix.jpg>]
-File: matrix.jpg Graphic file (type jpg)
- <use matrix.jpg>
-Package pdftex.def Info: matrix.jpg used on input line 128.
+Package pdftex.def Info: matrix.jpg used on input line 136.
 (pdftex.def)             Requested size: 171.14764pt x 135.05069pt.
  [4
 
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 161.
+ <./matrix.jpg>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 169.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 161.
+LaTeX Font Info:    Try loading font information for U+msb on input line 169.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 161.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 169.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 161.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 169.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 161.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 169.
  [5
 
 ]
-<img1.png, id=87, 257.96375pt x 252.945pt>
+<img1.png, id=95, 257.96375pt x 252.945pt>
 File: img1.png Graphic file (type png)
  <use img1.png>
-Package pdftex.def Info: img1.png used on input line 183.
+Package pdftex.def Info: img1.png used on input line 191.
 (pdftex.def)             Requested size: 171.14764pt x 167.8242pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 191.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 191.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 183.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 191.
 
-<img2.png, id=89, 257.96375pt x 252.945pt>
+<img2.png, id=97, 257.96375pt x 252.945pt>
 File: img2.png Graphic file (type png)
  <use img2.png>
-Package pdftex.def Info: img2.png used on input line 183.
+Package pdftex.def Info: img2.png used on input line 191.
 (pdftex.def)             Requested size: 171.14764pt x 167.8242pt.
  [6
 
@@ -1013,6 +1008,8 @@ Package pdftex.def Info: img2.png used on input line 183.
 
 ] [10
 
+] [11
+
 ]
 \tf@nav=\write6
 \openout6 = `ConceptsOnLinearSystem.nav'.
@@ -1023,21 +1020,21 @@ Package pdftex.def Info: img2.png used on input line 183.
 \tf@snm=\write8
 \openout8 = `ConceptsOnLinearSystem.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
  (./ConceptsOnLinearSystem.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
 Package rerunfilecheck Info: File `ConceptsOnLinearSystem.out' has not changed.
 
-(rerunfilecheck)             Checksum: BBBF4805168DE3F8215EBAB374F352D8;348.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
+(rerunfilecheck)             Checksum: F7E9838E1EE5053C969BF3DD7B8C8633;450.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 17609 strings out of 493089
- 333466 string characters out of 6134842
- 413656 words of memory out of 5000000
- 20626 multiletter control sequences out of 15000+600000
+ 17624 strings out of 493089
+ 333594 string characters out of 6134842
+ 411672 words of memory out of 5000000
+ 20637 multiletter control sequences out of 15000+600000
  47540 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,17n,57p,419b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1048,10 +1045,10 @@ live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texl
 ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015
 /texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on ConceptsOnLinearSystem.pdf (10 pages, 422525 bytes).
+Output written on ConceptsOnLinearSystem.pdf (11 pages, 423943 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 
