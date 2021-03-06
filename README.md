@@ -8,7 +8,7 @@ linear algebra
 [19E](https://echo360.org/section/90e1457b-5270-4980-90c2-b8472adceb10/home)
 - 19E-website by JF - [home](http://www.math.wpi.edu/Course_Materials/MA2071E19/)
 - LA is useful - [youtube](https://youtu.be/X0HXnHKPXSo)
-- 19 Final - [ipynb](src/20problem19finalv01.ipynb)
+- 19 Final - [ipynb](src/19final.ipynb)
 - Linear algebra basics with tensor flow - [ipynb](src/linalg_tf.ipynb)
 - LU factorization - [ipynb](src/lu.ipynb)
 - The four subspaces - [ipynb](src/four_subspace.ipynb)
