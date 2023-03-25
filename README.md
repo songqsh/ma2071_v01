@@ -1,7 +1,8 @@
 # ma2071_v01
 linear algebra
 
-- Linear transformation on 2-d image - [ipynb](src/linear_transform_image.ipynb), [video](https://youtu.be/L6BNtea3nNY)
+- Linear transformation on 2-d image by cv2 - [ipynb](src/linear_transform_image.ipynb), [video](https://youtu.be/L6BNtea3nNY)
+  - revised Linear transformation on 2-d image by PIL - [ipynb](src/image_transform_pil.ipynb)
 - Gaussian Elimination by python - [ipynb](src/GaussianElimination.ipynb), [video](https://youtu.be/dKBFeDXMd38)
 - JF videos - [17E](https://echo360.org/section/71c315db-db00-4936-8acd-3ce9a115144f/home), 
 [18E](https://echo360.org/section/a401bde8-b281-4b99-97ff-3bfd31c2b0ca/home),
