@@ -1,6 +1,7 @@
 # ma2071_v01
 linear algebra
-
+- Python with Colab - [ipynb](https://github.com/songqsh/MA2210/blob/main/src/python_notebook.ipynb)
+- Matrix operations - [ipynb](https://github.com/songqsh/MA2210/blob/main/src/matrix.ipynb)
 - Linear transformation on 2-d image by cv2 - [ipynb](src/linear_transform_image.ipynb), [video](https://youtu.be/L6BNtea3nNY)
   - revised Linear transformation on 2-d image by PIL - [ipynb](src/image_transform_pil.ipynb)
 - Gaussian Elimination by python - [ipynb](src/GaussianElimination.ipynb), [video](https://youtu.be/dKBFeDXMd38)
